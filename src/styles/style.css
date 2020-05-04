@@ -218,12 +218,12 @@ profile-card .profile-socmed .icon-socmed:hover path {
   width: 50px;
 }
 
-.pencegahan-column {
+pencegahan-list {
   display: flex;
   flex-direction: column;
 }
 
-.pencegahan-row {
+pencegahan-item {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -232,7 +232,7 @@ profile-card .profile-socmed .icon-socmed:hover path {
   height: 300px;
 }
 
-.pencegahan-row:nth-child(even) {
+pencegahan-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
@@ -306,7 +306,7 @@ footer {
 
   /* main start here */
 
-  .pencegahan-row {
+  pencegahan-item {
     height: 350px;
   }
 
@@ -405,12 +405,12 @@ footer {
     font-size: 40px;
   }
 
-  .pencegahan-row {
+  pencegahan-item {
     flex-direction: column-reverse;
     height: 100%;
   }
 
-  .pencegahan-row:nth-child(even) {
+  pencegahan-item:nth-child(even) {
     flex-direction: column-reverse;
   }
 

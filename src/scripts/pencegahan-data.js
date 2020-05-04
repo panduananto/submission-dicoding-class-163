@@ -1,4 +1,4 @@
-let pencegahan = [
+const pencegahan = [
   {
     title: "Sering Cuci Tangan Pakai Sabun",
     description:
