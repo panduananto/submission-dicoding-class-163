@@ -1,3 +1,5 @@
+import pencegahan from "./pencegahan-data.js"
+
 const mainNav = document.getElementById("navbar-menu");
 const navBarToggle = document.getElementById("navbar-toggler");
 
