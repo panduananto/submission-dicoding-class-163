@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Open+Sans:wght@300;400;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* header start here */
+
+header {
+  /* background-image: url("../assets/images/coronavirus-header-background.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  display: inline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1e1b;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  height: 75px;
+  /* margin-bottom: 30px; */
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+}
+
+nav span.logo {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* width: 30%; */
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+nav li a:hover {
+  font-weight: bolder;
+}
+
+.navbar-toggle {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-toggle .menu-button {
+  fill: white;
+}
+
+.intro-header-container {
+  /* height: 85%; */
+  /* max-width: 1040px; */
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  padding: 30px 30px 30px 30px;
+  background-image: url("../assets/images/coronavirus-header-background.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  /* max-width: 1040px; */
+}
+
+.intro-text-header {
+  color: white;
+  /* flex-basis: 60%; */
+  text-align: left;
+  padding: 30px 30px;
+  max-width: 48%;
+}
+
+.intro-text-header h1 {
+  font-size: 64px;
+  margin-bottom: 15px;
+}
+
+.intro-text-header p {
+  font-size: 32px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+
+aside {
+  /* flex-basis: 40%; */
+  max-width: 35%;
+  padding: 0 30px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  /* height: 450px; */
+  padding: 30px 30px;
+}
+
+.profile-info {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-header {
+  background-image: url("../assets/images/profile-picture.JPG");
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 150px;
+}
+
+.profile-socmed {
+  display: flex;
+  height: 40px;
+}
+
+.profile-socmed .icon-socmed path {
+  fill: #c41c19;
+}
+
+.profile-socmed .icon-socmed:hover path {
+  fill: #9d0503;
+}
+
+/* header end here */
+
+/* main start here */
+
+.about-covid {
+  background-color: #1d1e1b;
+  color: white;
+  text-align: center;
+  padding: 30px 60px;
+}
+
+.about-covid h1 {
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+
+.about-covid hr {
+  border: 2px solid #c41c19;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50px;
+}
+
+.about-covid p {
+  font-size: 24px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+.pencegahan-container {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.pencegahan-container h1 {
+  font-size: 52px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pencegahan-container hr {
+  border: 2px solid #c41c19;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50px;
+}
+
+.pencegahan-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.pencegahan-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* background-color: bisque; */
+  height: 300px;
+}
+
+.pencegahan-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.pencegahan-text {
+  padding: 30px 30px;
+  text-align: left;
+  width: 50%;
+}
+
+.pencegahan-text h2 {
+  margin-bottom: 10px;
+}
+
+.pencegahan-image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* main end here */
+
+/* footer start here */
+
+footer {
+  background-color: #c41c19;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* footer end here */
+
+/* Respopnsive breakpoint */
+
+@media screen and (max-width: 1024px) {
+  /* header start here */
+
+  .intro-header {
+    flex-direction: column;
+  }
+
+  .intro-text-header {
+    color: white;
+    /* flex-basis: 60%; */
+    text-align: center;
+    padding: 30px 30px;
+    max-width: 90%;
+  }
+
+  aside {
+    /* flex-basis: 40%; */
+    max-width: 90%;
+    padding: 0 30px;
+    margin-bottom: 60px;
+  }
+
+  .profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .profile-socmed {
+    display: flex;
+    height: 40px;
+    width: 240px;
+  }
+
+  /* header end here */
+
+  /* main start here */
+
+  .pencegahan-row {
+    height: 350px;
+  }
+
+  /* main end here */
+}
+
+@media screen and (max-width: 640px) {
+  /* header start here */
+
+  .intro-header {
+    flex-direction: column;
+  }
+
+  .intro-text-header {
+    color: white;
+    /* flex-basis: 60%; */
+    text-align: center;
+    padding: 30px 0;
+    max-width: 100%;
+  }
+
+  .intro-text-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .intro-text-header p {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+  }
+
+  aside {
+    /* flex-basis: 40%; */
+    max-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 60px;
+  }
+
+  nav {
+    display: block;
+    height: 100%;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  nav ul {
+    display: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  nav li:hover {
+    background-color: #2d3436;
+  }
+
+  nav li a {
+    margin-left: 0;
+  }
+
+  .navbar-toggle {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 30px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  /* header end here */
+
+  /* main start here */
+
+  .about-covid h1 {
+    font-size: 36px;
+  }
+
+  .about-covid p {
+    font-size: 20px;
+  }
+
+  .pencegahan-container {
+    padding: 30px 20px;
+  }
+
+  .pencegahan-container h1 {
+    font-size: 40px;
+  }
+
+  .pencegahan-row {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .pencegahan-row:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .pencegahan-text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .pencegahan-text h2 {
+    margin-bottom: 10px;
+  }
+
+  .pencegahan-image {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* main end here */
+
+  /* footer start here */
+
+  footer p {
+    font-size: 12px;
+  }
+
+  /* footer end here */
+}
