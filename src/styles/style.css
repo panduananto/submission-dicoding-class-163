@@ -118,13 +118,13 @@ nav-bar .navbar-toggle .menu-button {
   margin-bottom: 15px;
 }
 
-aside {
+profile-card {
   /* flex-basis: 40%; */
   max-width: 35%;
   padding: 0 30px;
 }
 
-.profile-card {
+profile-card .profile-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,17 +135,17 @@ aside {
   padding: 30px 30px;
 }
 
-.profile-info {
+profile-card .profile-info {
   text-align: center;
   margin: 25px 0;
 }
 
-.profile-info h2 {
+profile-card .profile-info h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.profile-header {
+profile-card .profile-picture {
   background-image: url("../assets/images/profile-picture.JPG");
   border-radius: 50%;
   background-size: cover;
@@ -156,16 +156,16 @@ aside {
   height: 150px;
 }
 
-.profile-socmed {
+profile-card .profile-socmed {
   display: flex;
   height: 40px;
 }
 
-.profile-socmed .icon-socmed path {
+profile-card .profile-socmed .icon-socmed path {
   fill: #c41c19;
 }
 
-.profile-socmed .icon-socmed:hover path {
+profile-card .profile-socmed .icon-socmed:hover path {
   fill: #9d0503;
 }
 
@@ -284,19 +284,19 @@ footer {
     max-width: 90%;
   }
 
-  aside {
+  profile-card {
     /* flex-basis: 40%; */
     max-width: 90%;
     padding: 0 30px;
     margin-bottom: 60px;
   }
 
-  .profile-info h2 {
+  profile-card .profile-info h2 {
     font-size: 24px;
     margin-bottom: 10px;
   }
 
-  .profile-socmed {
+  profile-card .profile-socmed {
     display: flex;
     height: 40px;
     width: 240px;
@@ -339,7 +339,7 @@ footer {
     margin-bottom: 15px;
   }
 
-  aside {
+  profile-card {
     /* flex-basis: 40%; */
     max-width: 100%;
     padding: 0 15px;

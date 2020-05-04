@@ -4,8 +4,7 @@ class NavBar extends HTMLElement {
   }
 
   render() {
-    this.innerHTML =
-    `
+    this.innerHTML = `
       <nav>
         <span class="logo">UDNAP</span>
         <ul id="navbar-menu">
@@ -27,7 +26,7 @@ class NavBar extends HTMLElement {
           </svg>
         </span>
       </nav>
-    `
+    `;
   }
 }
 
