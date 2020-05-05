@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "file-loader": "^6.0.0",
+    "moment": "^2.25.3",
     "regenerator-runtime": "^0.13.5"
   }
 }

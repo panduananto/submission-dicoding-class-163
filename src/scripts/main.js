@@ -1,5 +1,6 @@
 import "./component/pencegahan-list/pencegahan-list.js";
 import pencegahan from "./pencegahan-data.js";
+import ambilStatistik from "./statistik.js";
 
 const mainNav = document.getElementById("navbar-menu");
 const navBarToggle = document.getElementById("navbar-toggler");
@@ -16,3 +17,5 @@ const pencegahanListElement = document.createElement("pencegahan-list");
 pencegahanListElement.pencegahanMany = pencegahan;
 
 pencegahanListContainer.appendChild(pencegahanListElement);
+
+ambilStatistik();

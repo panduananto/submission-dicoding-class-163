@@ -289,13 +289,15 @@ pencegahan-item:nth-child(even) {
   margin-bottom: 30px;
 }
 
-.search-bar-container input {
+.search-bar-container select {
+  appearance: none;
   border: 1px solid #A0AEC0;
   border-radius: 10px;
   font-size: 16px;
   height: 40px;
   margin-bottom: 50px;
   padding: 10px 10px;
+  width: auto;
 }
 
 .per-country-result-container {
@@ -325,6 +327,11 @@ pencegahan-item:nth-child(even) {
   text-align: center;
 }
 
+.global-data-container h3{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .global-result-container {
   display: flex;
   flex-direction: row;
@@ -333,11 +340,34 @@ pencegahan-item:nth-child(even) {
 }
 
 .global-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   border-radius: 10px;
   height: 235px;
   margin: 0px 35px;
   width: 33.33%;
+}
+
+.global-box span {
+  font-size: 24px;
+}
+
+.positive h1 {
+  color: #38a169;
+  margin-bottom: 10px;
+}
+
+.death h1 {
+  color: #e53e3e;
+  margin-bottom: 10px;
+}
+
+.recover h1 {
+  color: #ed8936;
+  margin-bottom: 10px;
 }
 
 /* main end here */
@@ -394,6 +424,26 @@ footer {
 
   pencegahan-item {
     height: 350px;
+  }
+
+  .per-country-result-container {
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+  
+  .per-country-box {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .global-result-container {
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+
+  .global-box {
+    margin-bottom: 25px;
+    width: 100%
   }
 
   /* main end here */
