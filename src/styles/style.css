@@ -282,6 +282,7 @@ pencegahan-item:nth-child(even) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .search-bar-container h2 {
@@ -295,9 +296,13 @@ pencegahan-item:nth-child(even) {
   border-radius: 10px;
   font-size: 16px;
   height: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 10px 10px;
   width: auto;
+}
+
+.search-bar-container select:focus {
+  outline: none;
 }
 
 .per-country-result-container {
@@ -308,11 +313,19 @@ pencegahan-item:nth-child(even) {
 }
 
 .per-country-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   border-radius: 10px;
   height: 235px;
   margin: 0px 35px;
   width: 33.33%;
+}
+
+.per-country-box span {
+  font-size: 24px;
 }
 
 .global-data-container {

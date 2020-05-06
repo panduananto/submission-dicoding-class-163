@@ -52,17 +52,18 @@
             <div class="per-country-data-container">
               <div class="search-bar-container">
                 <h2>Cari berdasarkan negara:</h2>
-                <select name="" id="country-select"></select>
+                <select name="country-select" id="country-select"></select>
+                <h3 id="date-last-update-country"></h3>
               </div>
               <div class="per-country-result-container">
-                <div class="per-country-box positive"></div>
-                <div class="per-country-box death"></div>
-                <div class="per-country-box recover"></div>
+                <div class="per-country-box positive" id="country-positve"></div>
+                <div class="per-country-box death" id="country-death"></div>
+                <div class="per-country-box recover" id="country-recover"></div>
               </div>
             </div>
             <div class="global-data-container">
               <h2>Total kasus seluruh dunia:</h2>
-              <h3 id="date-last-update"></h3>
+              <h3 id="date-last-update-global"></h3>
               <div class="global-result-container">
                 <div class="global-box positive" id="global-positive"></div>
                 <div class="global-box death" id="global-death"></div>

@@ -42,6 +42,30 @@ function ambilStatistik() {
       });
   };
 
+  const getCountryStat = (keyword) => {
+    let countrySelect = keyword;
+    console.log(countrySelect);
+    fetch(`${baseURL}/countries/${countrySelect}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJson) => {
+        if (responseJson.error) {
+          showResponseMessage(responseJson.message);
+        } else {
+          renderCountryStat(
+            responseJson.confirmed,
+            responseJson.recovered,
+            responseJson.deaths,
+            responseJson.lastUpdate
+          );
+        }
+      })
+      .catch((error) => {
+        showResponseMessage(error);
+      });
+  };
+
   // fungsi showResponseMessage default parameter message check koneksi internet
   const showResponseMessage = (message = "Check your internet connection") => {
     alert(message);
@@ -53,45 +77,95 @@ function ambilStatistik() {
 
     countries.forEach((country) => {
       selectCountryElement.innerHTML += `
-        <option>${country.name}</option>
+        <option value="${country.name}">${country.name}</option>
       `;
     });
   };
 
   const renderGlobalStat = (confirmed, recovered, deaths, lastUpdate) => {
-    const textConfirmedElement = document.querySelector("#global-positive");
-    const textDeathElement = document.querySelector("#global-death");
-    const textRecoverElement = document.querySelector("#global-recover");
-    const textDateLastUpdateElement = document.querySelector(
-      "#date-last-update"
+    const textGlobalConfirmedElement = document.querySelector(
+      "#global-positive"
+    );
+    const textGlobalDeathElement = document.querySelector("#global-death");
+    const textGlobalRecoverElement = document.querySelector("#global-recover");
+    const textGlobalDateLastUpdateElement = document.querySelector(
+      "#date-last-update-global"
     );
 
-    const confirmedNumber = new Intl.NumberFormat().format(confirmed.value);
-    const deathNumber = new Intl.NumberFormat().format(deaths.value);
-    const recoverNumber = new Intl.NumberFormat().format(recovered.value);
+    const confirmedGlobalNumber = new Intl.NumberFormat().format(
+      confirmed.value
+    );
+    const deathGlobalNumber = new Intl.NumberFormat().format(deaths.value);
+    const recoverGlobalNumber = new Intl.NumberFormat().format(recovered.value);
 
-    textDateLastUpdateElement.innerHTML = `
+    textGlobalDateLastUpdateElement.innerHTML = `
       ${moment(lastUpdate).format("dddd, MMMM Do YYYY, h:mm:ss a")}
     `;
 
-    textConfirmedElement.innerHTML = `
-      <h1>${confirmedNumber}</h1>
+    textGlobalConfirmedElement.innerHTML = `
+      <h1>${confirmedGlobalNumber}</h1>
       <span>Terjangkit</span>
     `;
 
-    textDeathElement.innerHTML = `
-      <h1>${deathNumber}</h1>
+    textGlobalDeathElement.innerHTML = `
+      <h1>${deathGlobalNumber}</h1>
       <span>Meninggal</span>
     `;
 
-    textRecoverElement.innerHTML = `
-      <h1>${recoverNumber}</h1>
+    textGlobalRecoverElement.innerHTML = `
+      <h1>${recoverGlobalNumber}</h1>
+      <span>Sembuh</span>
+    `;
+  };
+
+  const renderCountryStat = (confirmed, recovered, deaths, lastUpdate) => {
+    const textCountryConfirmedElement = document.querySelector(
+      "#country-positve"
+    );
+    const textCountryDeathElement = document.querySelector("#country-death");
+    const textCountryRecoverElement = document.querySelector(
+      "#country-recover"
+    );
+    const textCountryDateLastUpdateElement = document.querySelector(
+      "#date-last-update-country"
+    );
+
+    const confirmedCountryNumber = new Intl.NumberFormat().format(
+      confirmed.value
+    );
+    const deathCountryNumber = new Intl.NumberFormat().format(deaths.value);
+    const recoverCountryNumber = new Intl.NumberFormat().format(
+      recovered.value
+    );
+
+    textCountryDateLastUpdateElement.innerHTML = `
+      ${moment(lastUpdate).format("dddd, MMMM Do YYYY, h:mm:ss a")}
+    `;
+
+    textCountryConfirmedElement.innerHTML = `
+      <h1>${confirmedCountryNumber}</h1>
+      <span>Terjangkit</span>
+    `;
+
+    textCountryDeathElement.innerHTML = `
+      <h1>${deathCountryNumber}</h1>
+      <span>Meninggal</span>
+    `;
+
+    textCountryRecoverElement.innerHTML = `
+      <h1>${recoverCountryNumber}</h1>
       <span>Sembuh</span>
     `;
   };
 
   getCountry();
   getGlobalStat();
+
+  const countrySelectElement = document.getElementById("country-select");
+
+  countrySelectElement.addEventListener("change", function () {
+    getCountryStat(this.value);
+  });
 }
 
 export default ambilStatistik;
