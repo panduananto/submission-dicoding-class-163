@@ -162,7 +162,7 @@ profile-card .profile-socmed {
 }
 
 profile-card .profile-socmed .icon-socmed path {
-  fill: #c41c19;
+  fill: #db2626;
 }
 
 profile-card .profile-socmed .icon-socmed:hover path {
@@ -186,7 +186,7 @@ profile-card .profile-socmed .icon-socmed:hover path {
 }
 
 .about-covid hr {
-  border: 2px solid #c41c19;
+  border: 2px solid #db2626;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -210,7 +210,7 @@ profile-card .profile-socmed .icon-socmed:hover path {
 }
 
 .pencegahan-container hr {
-  border: 2px solid #c41c19;
+  border: 2px solid #db2626;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -254,7 +254,7 @@ pencegahan-item:nth-child(even) {
 }
 
 .data-statistik-container {
-  background-color: #EDF2F7;
+  background-color: #edf2f7;
   padding-top: 30px;
 }
 
@@ -265,7 +265,7 @@ pencegahan-item:nth-child(even) {
 }
 
 .data-statistik-container hr {
-  border: 2px solid #c41c19;
+  border: 2px solid #db2626;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -292,7 +292,7 @@ pencegahan-item:nth-child(even) {
 
 .search-bar-container select {
   appearance: none;
-  border: 1px solid #A0AEC0;
+  border: 1px solid #a0aec0;
   border-radius: 10px;
   font-size: 16px;
   height: 40px;
@@ -303,6 +303,19 @@ pencegahan-item:nth-child(even) {
 
 .search-bar-container select:focus {
   outline: none;
+}
+
+.no-country {
+  background-color: #e53e3e;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.no-country h3 {
+  color: white;
+  font-weight: 400;
+  text-align: center;
 }
 
 .per-country-result-container {
@@ -340,7 +353,7 @@ pencegahan-item:nth-child(even) {
   text-align: center;
 }
 
-.global-data-container h3{
+.global-data-container h3 {
   margin-bottom: 30px;
   text-align: center;
 }
@@ -388,7 +401,7 @@ pencegahan-item:nth-child(even) {
 /* footer start here */
 
 footer {
-  background-color: #c41c19;
+  background-color: #db2626;
   color: white;
   text-align: center;
   padding: 20px;
@@ -443,7 +456,7 @@ footer {
     flex-direction: column;
     margin: 0px 30px;
   }
-  
+
   .per-country-box {
     margin-bottom: 25px;
     width: 100%;
@@ -456,7 +469,7 @@ footer {
 
   .global-box {
     margin-bottom: 25px;
-    width: 100%
+    width: 100%;
   }
 
   /* main end here */

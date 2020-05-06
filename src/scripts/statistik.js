@@ -51,7 +51,7 @@ function ambilStatistik() {
       })
       .then((responseJson) => {
         if (responseJson.error) {
-          showResponseMessage(responseJson.message);
+          renderErrorCountry(responseJson.error);
         } else {
           renderCountryStat(
             responseJson.confirmed,
@@ -62,13 +62,31 @@ function ambilStatistik() {
         }
       })
       .catch((error) => {
-        showResponseMessage(error);
+        renderErrorCountry(error);
       });
   };
 
   // fungsi showResponseMessage default parameter message check koneksi internet
   const showResponseMessage = (message = "Check your internet connection") => {
     alert(message);
+  };
+
+  const renderErrorCountry = (error = "Check your internet connection") => {
+    const searchBarContainerElement = document.querySelector(
+      ".search-bar-container"
+    );
+
+    const containerError = document.createElement("div");
+    containerError.className = "no-country";
+    containerError.innerHTML = `
+      <h3>${error.message}</h3>
+    `;
+
+    searchBarContainerElement.appendChild(containerError);
+
+    setTimeout(function () {
+      containerError.remove();
+    }, 2000);
   };
 
   const renderCountryList = (countries) => {

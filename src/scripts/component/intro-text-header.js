@@ -9,8 +9,8 @@ class IntroTextHeader extends HTMLElement {
       <div class="intro-text-header-container">
         <h1>Pencegahan COVID-19</h1>
         <p>
-          Website ini dibuat sebagai submission tugas Pemrograman Web Dasar
-          dari Dicoding oleh Pandu Ananto Hogantara
+          Website ini dibuat sebagai submission tugas Fundamental 
+          Front-End Develpoment dari Dicoding oleh Pandu Ananto Hogantara
         </p>
       </div>
     `
