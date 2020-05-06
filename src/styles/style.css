@@ -283,6 +283,7 @@ pencegahan-item:nth-child(even) {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  width: auto;
 }
 
 .search-bar-container h2 {
@@ -291,14 +292,12 @@ pencegahan-item:nth-child(even) {
 }
 
 .search-bar-container select {
-  appearance: none;
   border: 1px solid #a0aec0;
   border-radius: 10px;
   font-size: 16px;
   height: 40px;
   margin-bottom: 20px;
   padding: 10px 10px;
-  width: auto;
 }
 
 .search-bar-container select:focus {
